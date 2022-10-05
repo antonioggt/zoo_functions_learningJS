@@ -30,3 +30,18 @@ it('', () => {
   const expected = 'The zoo is open';
   expect(actual).toBe(expected);
 });
+it('', () => {
+  const actual = getOpeningHours('Thu', '09:00-AM');
+  const expected = 'The day must be valid. Example: Monday';
+  expect(actual).toThrow(expected);
+});
+it('', () => {
+  const actual = getOpeningHours('Friday', '09:00-ZM');
+  const expected = 'The abbreviation must be \'AM\' or \'PM\'';
+  expect(actual).toThrow(expected);
+});
+it('', () => {
+  const actual = getOpeningHours('Saturday', 'C9:00-AM');
+  const expected = 'The hour should represent a number';
+  expect(actual).toThrow(expected);
+});
