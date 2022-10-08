@@ -45,3 +45,23 @@ it('', () => {
   const expected = 'The hour should represent a number';
   expect(actual).toThrow(expected);
 });
+it('', () => {
+  const actual = getOpeningHours('Saturday', '09:c0-AM');
+  const expected = 'The minutes should represent a number';
+  expect(actual).toThrow(expected);
+});
+it('', () => {
+  const actual = getOpeningHours('Monday', '14:00AM');
+  const expected = 'The hour must be between 0 and 12';
+  expect(actual).toThrow(expected);
+});
+it('', () => {
+  const actual = getOpeningHours('Tuesday', '09:60AM');
+  const expected = 'The minutes must be between 0 and 59';
+  expect(actual).toThrow(expected);
+});
+it('', () => {
+  const actual = getOpeningHours('Monday', '09:62AM');
+  const expected = 'The minutes must be between 0 and 59';
+  expect(actual).toThrow(expected);
+});
