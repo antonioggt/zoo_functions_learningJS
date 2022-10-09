@@ -67,7 +67,6 @@ Ao receber um array com 1 criança e 1 pessoa mais velha retorna o valor correto
 
  */
 
-const { prices } = require('../data/zoo_data');
 const data = require('../data/zoo_data');
 
 function countEntrants(entrants) {
