@@ -60,7 +60,6 @@ const arrayGeral = employees.map((e) => ({
   species: spcValue(e.responsibleFor),
   locations: lctValue(e.responsibleFor),
 }));
-
 const firstNames = employees.map((e) => `${e.firstName}`);
 const lastNames = employees.map((e) => `${e.lastName}`);
 const names = [...firstNames, ...lastNames];
@@ -110,4 +109,6 @@ function getEmployeesCoverage(param) {
 // const obj = { id: '', fullName: '', species: [...speciesValue] };    // obj.id = e.id;
 // obj.fullName = `${e.firstName} ${e.lastName}`;
 }
+
+console.log(getEmployeesCoverage({ name: 'Burl' }));
 module.exports = getEmployeesCoverage;
